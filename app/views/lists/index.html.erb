@@ -1,5 +1,7 @@
 <h1>Lists#index</h1>
 <p>Find me in app/views/lists/index.html.erb</p>
 <% @lists.each do |list| %>
-  <p><%= list.name %> films : <%= list.movies.count %></p>
+  <%= link_to list_path(list) do %>
+    <p><%= list.name %> films : <%= list.movies.count %></p>
+  <% end %>
 <% end %>
